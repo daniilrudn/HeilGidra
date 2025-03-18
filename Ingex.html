@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запрос имени</title>
+</head>
+<body>
+
+    <h1>Привет, давай познакомимся!</h1>
+    
+    <!-- Поле для ввода имени -->
+    <label for="name">Введите ваше имя: </label>
+    <input type="text" id="name" placeholder="Ваше имя">
+    
+    <!-- Кнопка для отправки имени -->
+    <button onclick="greetUser()">Приветствовать</button>
+
+    <p id="greeting"></p> <!-- Место для вывода приветствия -->
+
+    <script>
+        // Функция для приветствия
+        function greetUser() {
+            // Получаем введённое имя
+            var name = document.getElementById("name").value;
+            
+            // Если имя не пустое, выводим приветствие
+            if (name) {
+                document.getElementById("greeting").innerText = "Привет, " + name + "! Рад познакомиться!";
+            } else {
+                document.getElementById("greeting").innerText = "Пожалуйста, введите имя!";
+            }
+        }
+    </script>
+
+</body>
+</html>
